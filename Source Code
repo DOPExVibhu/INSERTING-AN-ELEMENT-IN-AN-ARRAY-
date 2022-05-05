@@ -1,0 +1,43 @@
+// preprocessor derictive 
+#include <stdio.h>
+// prototype of the function 
+void insert(int[],int,int);
+// main method 
+int main()
+{
+  /* Delcaring an array on which working is required and taking the input of the required index and number to be inserted from the user */
+  int arr[6]={1,2,3,4,5,6};
+  int index,number; 
+  printf("Enter the index of the array and the required number \n ");
+  // Input of the index and the number to be inserted 
+  scanf("%i%i",&index,&number);
+  // user defined function 
+  /* Calling the function(Having no return type) For the further execution of program N Inplementation of the required Logic */
+  insert(arr,index,number);
+  // Return Statement 
+  return 0;
+  
+} // End of C program 
+// User Defined Function (Having no Return Value)
+void insert(int arr[],int index,int number)
+{
+  // Declaration of iterative variable 
+  int i; 
+  
+  /* iterating the array in reverse in order to shift all the elements to right from (u to u+1 postion ) */
+  for(i=6;i>index;i--)
+    {
+      arr[i]=arr[i-1];
+    }
+  // Inserting the number at the required particular index 
+   arr[index]=number;
+  
+  // Printing the required Array 
+  printf("\nPrinting the array : \t");
+  for(i=0;i<=6;i++)
+  {
+    // Printing the elements of array in each iteration 
+    printf("%i\t",arr[i]);
+  }
+  
+} // End of Function 
