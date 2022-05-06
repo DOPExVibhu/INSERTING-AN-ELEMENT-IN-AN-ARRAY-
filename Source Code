@@ -6,7 +6,7 @@ void insert(int[],int,int);
 int main()
 {
   /* Delcaring an array on which working is required and taking the input of the required index and number to be inserted from the user */
-  int arr[6]={1,2,3,4,5,6};
+  int arr[]={1,2,3,4,5,6};
   int index,number; 
   printf("Enter the index of the array and the required number \n ");
   // Input of the index and the number to be inserted 
